@@ -1,0 +1,283 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #121212;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #FFD700;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light {
+    background-color: #F5F5F5;
+    color: #121212;
+}
+
+/* Frame-like Page Container */
+.page-frame {
+    border: 8px solid rgba(255, 215, 0, 0.8);
+    padding: 16px;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    width: 420px;
+    max-width: 90%;
+    background: linear-gradient(145deg, #1e1e1e, #232323);
+    transition: background-color 0.3s;
+}
+
+.page-frame.light {
+    background: #FFFFFF;
+    border-color: #121212;
+}
+
+/* Todo Container */
+.todo-container {
+    padding: 20px;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #232323, #1e1e1e);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s;
+}
+
+.todo-container.light {
+    background: #FAFAFA;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FFD700;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+body.light h1 {
+    color: #121212;
+}
+
+/* Input Section */
+.todo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+#task-input,
+.styled-input {
+    padding: 12px;
+    border: 1px solid #FFD700;
+    border-radius: 8px;
+    background-color: #2A2A2A;
+    color: #FFD700;
+    font-size: 16px;
+    appearance: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.light #task-input,
+body.light .styled-input {
+    background-color: #FFFFFF;
+    color: #121212;
+    border-color: #121212;
+}
+
+#task-input::placeholder,
+.styled-input::placeholder {
+    color: #B5A642;
+}
+
+body.light #task-input::placeholder,
+body.light .styled-input::placeholder {
+    color: #777;
+}
+
+#add-task {
+    padding: 12px;
+    border: none;
+    background: linear-gradient(90deg, #FFD700, #E5C100);
+    color: #121212;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+#add-task:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #FFC300, #E5C100);
+}
+
+/* Task Controls */
+.task-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 12px;
+    border: 1px solid #FFD700;
+    border-radius: 8px;
+    background-color: #2A2A2A;
+    color: #FFD700;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.light select {
+    background-color: #FFFFFF;
+    color: #121212;
+    border-color: #121212;
+}
+
+/* Task List */
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #2A2A2A, #323232);
+    margin-bottom: 12px;
+    transition: transform 0.2s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(145deg, #323232, #2A2A2A);
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    background: linear-gradient(145deg, #3A3A3A, #434343);
+    color: #B5A642;
+}
+
+body.light .task-item {
+    background: #FFFFFF;
+    border: 1px solid #121212;
+    color: #121212;
+}
+
+body.light .task-item.completed {
+    background: #F0F0F0;
+    color: #777;
+}
+
+/* Task Details */
+.task-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.task-item div small {
+    font-size: 12px;
+    color: #B5A642;
+}
+
+body.light .task-item div small {
+    color: #777;
+}
+
+/* Actions Section */
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.delete-task {
+    background: #FFD700;
+    color: #121212;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-task:hover {
+    background: #FFC300;
+}
+
+/* Checkbox Styling */
+.task-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #FFD700;
+}
+
+body.light .task-item input[type="checkbox"] {
+    accent-color: #121212;
+}
+
+/* Date and Time Input Calendar Styling */
+input[type="date"],
+input[type="time"] {
+    color-scheme: dark;
+}
+
+body.light input[type="date"],
+body.light input[type="time"] {
+    color-scheme: light;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 10px 16px;
+    background: #FFD700;
+    color: #121212;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    background: #FFC300;
+}
+
+/* Notification Popup */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(145deg, #232323, #1e1e1e);
+    color: #FFD700;
+    padding: 16px;
+    border: 2px solid rgba(255, 215, 0, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 14px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}

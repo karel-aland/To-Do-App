@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-frame">
+        <button class="theme-toggle">Toggle Theme</button>
+        <div class="todo-container">
+            <h1>To-do List</h1>
+            <div class="todo-input">
+                <input type="text" id="task-input" placeholder="Enter a task">
+                <input type="date" id="date-input" class="styled-input">
+                <input type="time" id="time-input" class="styled-input">
+                <button id="add-task">Add Task</button>
+            </div>
+            <div class="task-controls">
+                <select id="filter-tasks">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="incomplete">Incomplete</option>
+                </select>
+                <select id="sort-tasks">
+                    <option value="date">Sort by Date</option>
+                    <option value="title">Sort by Title</option>
+                </select>
+            </div>
+            <ul id="task-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
